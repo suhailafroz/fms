@@ -24,17 +24,17 @@ function display_kmlmap() {
     [17.4287545, 78.425871],
     [17.3387461, 78.68745],
     [17.3253261, 78.444879]
-
-
     ];//{ lat: 17.415061,  78.464829 };
 
+
+
+    var marker;
     var contentString = 'This is the infoWindow content';
 
     var infowindow = new google.maps.InfoWindow({
         content: contentString
     });
 
-    var marker;
     for (i = 0; i < myLatLng.length; i++) {
         marker = new google.maps.Marker({
             position: new google.maps.LatLng(myLatLng[i][0], myLatLng[i][1]),
@@ -42,7 +42,9 @@ function display_kmlmap() {
             animation: google.maps.Animation.DROP
         });
     }
-    marker.addListener('click', toggleBounce);
+    for (i = 0; i < myLatLng.length; i++) {
+        marker.addListener('click', toggleBounce);
+    }
 
     function toggleBounce() {
         infowindow.open(map, marker);
