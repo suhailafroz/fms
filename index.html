@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KML Map</title>
+    <link rel="stylesheet" href="mystyles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="display_kmlmap()">
+    <div class="content">
+        <div class="header">
+            <img src="Telangana Logo.jpg" style="width:60px; height:68px; float:left;margin-left:250px;" />
+            <h1><a href="#default" class="logo"><a>FLOOD MONITORING SYSTEM</a></h1>
+            <img src="KChandrashekar Rao.png" style="width:60px; height:65px; margin-left:10px;" />
+            <div class="header-right">
+                <a class="active" href="#home">Home</a>
+                <a href="news">News</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+            </div>
+        </div id="toggle" style="background-color:black;">
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">X</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+            <div class="navbar">
+                <div class="dropdown">
+                    <button class="dropbtn">Sensors
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#" class="btn-primary">SENSOR 1</a>
+                        <a href="#" class="btn-primary">SENSOR 2</a>
+                        <a href="#" class="btn-primary">SENSOR 3</a>
+                        <a href="#" class="btn-primary">SENSOR 4</a>
+                        <a href="#" class="btn-primary">SENSOR 5</a>
+                        <a href="#" class="btn-primary">SENSOR 6 </a>
+                        <a href="#" class="btn-primary">SENSOR 7</a>
+                        <a href="#" class="btn-primary">SENSOR 8</a>
+                        <a href="#" class="btn-primary">SENSOR 9</a>
+                        <a href="#" class="btn-primary">SENSOR 10</a>
+                        <a href="#" class="btn-primary">SENSOR 11</a>
+                        <a href="#" class="btn-primary">SENSOR 12</a>
+                        <a href="#" class="btn-primary">SENSOR 13</a>
+                        <a href="#" class="btn-primary">SENSOR 14</a>
+                        <a href="#" class="btn-primary">SENSOR 15</a>
+                        <a href="#" class="btn-primary">SENSOR 16</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">>></button>
+
+        </div>
+        <div id="map_canvas"></div>
+        <div id="chartContainer"></div>
+        <div id="pieContainer"></div>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"> </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCD654VoREWfT6kIKZcAXfgOWJ6DYMXDPc&sensor=false&region=IN"></script>
+    <script src="myscripts.js"></script>
+
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "220px";
+            document.getElementById("main").style.marginLeft = "100px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
+</body>
+
+</html>
