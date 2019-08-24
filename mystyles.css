@@ -81,6 +81,8 @@ html,  body
 .header-right {
     float: right;
     margin-left: 5px;
+    margin-top:15px;
+    margin-right: 5px;
 }
 
 .sidebar {
